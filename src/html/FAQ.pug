@@ -1,0 +1,27 @@
+section#FAQ.FAQ
+  h3.title #[b Отвечаем] на ваши вопросы
+  .FAQ-content.container
+    .FAQ-main(x-data="FAQ")
+      template(x-for="(column, columnInd) in FAQList" :key="columnInd")
+        .FAQ-column
+          template(x-for="(question, questionInd) in column" :key="questionInd")
+            .question
+                .question-header(@click="question.active=!question.active")
+                  img(src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy" :class="question.active?'active-arrow':''")
+                  h5.question-text(x-text="question.questionText")
+                  span.question-number(x-text="((questionInd+(columnInd?5:0)+1 >= 10)?'':'0') + (questionInd+1+(columnInd?5:0))" :class="question.active?'active-question':''")
+                p.answer(
+                  @click="question.active=!question.active"
+                  x-text="question.answer"
+                  x-show="question.active"
+                  x-transition
+                  x-transition:enter.duration.400ms
+                  x-transition:leave.duration.300ms
+                )
+          template(x-if="columnInd")
+            .other-questions
+              p Хотите обсудить вопрос напрямую с хирургом?
+              a(href="#registration") ОСТАВИТЬ ЗАЯВКУ #[img(src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy")]
+    .FAQ-haritonow
+      p.haritonow-answer На вопросы отвечает хирург #[b Константин Харитонов]
+      img(src="./img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy")

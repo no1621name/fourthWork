@@ -1,0 +1,64 @@
+header(x-data="header")
+  .top-header
+    .experience
+      img(src="../img/logo.svg", alt="logo" loading="lazy")
+      p Хирургический стаж в #[b эстетической медицине с 2014 года]
+    button#menuButton.menu-button(@click="toggleNavbar")
+      img(src="./img/icons/icon.svg#burger" alt="burger")
+    .header-clinic
+      img(src="./img/clinic/clinic1.png", alt="clinic" loading="lazy")
+      p Двухэтажная клиника 1000 кв.м  #[b открылась в 2020 году в Москве] #[a.underline-decorate(href="/") Посмотреть видео о клинике]
+    .rating
+      span.rating-value 5,0
+      p
+        span.stars(x-data="{starsCount: 5}")
+          template(x-for="i in starsCount" :key="i")
+            img(src="./img/icons/icon.svg#star" alt=`star${i}` loading="lazy")
+          br
+        | #[b Рейтинг клиники] согласно #[a.underline-decorate(href="/") отзывам наших пациентов]
+    +messengers()
+    .header-contacts
+        .main-contacts
+          span #[span.online-mark Звоните,] Пн-ВС 8:00 - 21:00
+          span.phone-number +7 (499) 286 88 60
+        span.underline-decorate Москва, ул. Б. Очаковская, д.31
+  nav(
+    x-show="!isShowNavbar"
+    @click="window.outerWidth <= 1023 ? toggleNavbar : ''"
+    x-transition
+    x-transition.duration.600ms
+  )
+    .nav-container(
+      x-show="!isShowNavbar"
+      x-transition
+      x-transition.duration.400ms
+    )
+      template(x-for="(link, ind) in links" :key="ind")
+        a(x-text="link.text" :href="link.href")
+  .bottom-header
+    .bottom-header-content.container
+      .bottom-header-text-content
+        h3.title Ринопластика #[b 110 000 рублей в рассрочку] от 20 минут
+        .consultation-services
+          span #[b Приходите на консультацию], если хотите:
+          .consultation-services-list(x-data="consultation")
+            template(x-for="(service, ind) in consultationServices" :key="ind")
+              .consultation-service
+                +checkMark()
+                p(x-html="service")
+          .results
+            a(href="/")
+              img(src="../img/header/video-preview.png", alt="video-preview" loading="lazy")
+              img(src="./img/icons/icon.svg#play-arrow", alt="play-arrow" loading="lazy")
+            p #[b Результат операции] видео 15 сек.
+        .header-registration
+          .registration-link
+            a(href="#registration") Записаться на бесплатную консультацию с фотомоделированием #[img(src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy")]
+            span.terms Акция действительна до: 11.05.2022
+          .online-answer
+            span #[span.online-mark Есть вопросы?] Спросите ONLINE
+            +messengers()
+      .header-haritonow
+        +haritonowInfo()
+          span.post Пластический хирург клиники “Revitalife”
+        img(src="../img/haritonow/haritonow1.png" alt="haritonow1")

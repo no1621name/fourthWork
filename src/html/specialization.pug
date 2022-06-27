@@ -1,0 +1,10 @@
+section.specialization
+  .specialization-content.container
+    h3.title Мы специализируемся #[b на операциях:]
+    .specializations-list(x-data="specializations")
+      template(x-for="(specialization, ind) in specializationsList" :key="ind")
+        .specialization
+          span.numerical-order(x-text="ind+1")
+          h5.specialization-title(x-html="specialization.title")
+          p.specialization-description(x-text="specialization.description")
+    a(href="/") #[span Посмотреть медицинскую лицензию]

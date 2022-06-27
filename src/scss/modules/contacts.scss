@@ -1,0 +1,160 @@
+.contacts{
+  position: relative;
+  border-radius: 40px 40px 0px 0px;
+  .contacts-content{
+    position: absolute;
+    top: 14.5%;
+    left: 6%;
+    background: #fff;
+    height: 415px;
+    width: 820px;
+    display: flex;
+    border-radius: 0 20px 0 0;
+    padding: 50px 65px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    .contacts-text-content{
+      .main-contacts{
+        text-align-last: left;
+        span:first-child{
+          padding-left: 15px;
+        }
+      }
+      .address{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img{
+          width: 18px;
+          height: 29px;
+        }
+        p{
+          margin-left: 13px;
+          width: 220px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+      .internet-contacts{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .messangers-container, .social-medias-container{
+          display: flex;
+          height: 112px;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-direction: column;
+          width: min-content;
+          span{
+            font-size: 18px;
+            line-height: 24px;
+          }
+          .messengers, .social-medias{
+            width: max-content;
+            justify-content: flex-start;
+            a{
+              &:nth-child(2){
+                margin-left: 12px;
+              }
+              img{
+                width: 47px;
+                height: 47px;
+              }
+            }
+          }
+        }
+        .messangers-container{
+          width: 145px;
+        }
+      }
+    }
+    .contacts-clinic{
+      width: 300px;
+      h5{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .contacts-clinic-img{
+        display: grid;
+        grid-template-rows: repeat(2, 105px);
+        grid-template-columns: repeat(2, 142px);
+        grid-gap: 15px;
+        img{
+          width: 142px;
+          height: 105px;
+          border-radius: 13px;
+        }
+      }
+    }
+  }
+}
+
+//adaptability
+
+@media(max-width: 1439px){
+  .contacts .contacts-content{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+}
+
+@media(max-width: 1023px){
+  .contacts .contacts-content{
+    width: 697px;
+    height: 408px;
+    padding: 40px;
+  }
+}
+
+@media(max-width:767px){
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    .contacts-content{
+      position: relative;
+      transform: none;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      flex-direction: column;
+      height: max-content;
+      width: min-content;
+      padding: 0px;
+      .contacts-text-content{
+        .main-contacts{
+          align-items: center;
+          > span{
+            font-size: 12px;
+          }
+          .phone-number{
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 210px;
+            align-items: center;
+          }
+        }
+        .address{
+          justify-content: center;
+          p{
+            width: 155px;
+          }
+        }
+        .internet-contacts{
+          flex-direction: column;
+          .messangers-container, .social-medias-container{
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}

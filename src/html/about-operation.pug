@@ -1,0 +1,41 @@
+section#aboutOperation.about-operation
+  .about-operation-content.container(x-data="aboutOperation")
+    h3.title Подробно #[b об операции]
+    .about-operation-swiper
+      .about-operation-swiper-pagination
+      .swiper-wrapper
+        template(x-for="(slide, slideInd) in aboutOperationList" :key="slideInd")
+          .swiper-slide
+            template(x-for="(text, textInd) in slide" :key="textInd")
+              .slide-info
+                img(src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy")
+                p(x-text="text")
+    span.remark В ходе одной ринопластики #[b может быть скорректировано несколько дефектов,] включая одновременную коррекцию спинки, крыльев, кончика.
+    .surgeon-opinion
+      .surgeon-opinion-info
+        h4.title Пластический хирург #[b о ринопластике:]
+        p Есть #[b 2 типа ринопластики,] которые используются наиболее часто:
+        +note()
+          p #[b Открытая] -  я использую #[b в сложных случаях при необходимости] устранения посттравматических деформаций наружного носа и носовой перегородки. При этой технике все мягкие ткани носа поднимаются.
+        +note()
+          p #[b Закрытая] - менее травматична и этот метод я использую #[b при первичной ринопластике.] Все манипуляции происходят через небольшие разрезы в носовых ходах, благодаря чему снаружи никаких следов не остается.
+        .surgeon-opinion-text
+          img(src="../img/haritonow/haritonow3.png", alt="haritonow3" loading="lazy")
+          p
+            | #[b Я применяю оба метода в зависимости от конкретного случая пациента.] Всё зависит от того, какая проблема изначально. Часто именно правильно
+            | подобранный тип ринопластики позволяет избежать возможных нежелательных последствий»
+          a(href="#aboutHaritonow") #[span.underline-decorate Подробнее о хирурге клиники “Revitalife”]
+          +haritonowInfo()
+            span.post Пластический хирург клиники “Revitalife”'
+    .advantages
+      .advantages-list
+        .advantages-text
+          h4.title При любой операции в нашей клинике #[b вы получаете:]
+          p
+            | Все очные консультации проходят в клинике REVITALIFE по адресу: г. Москва, ул. Большая Очаковская, дом 31 Ежедневно
+            | с 8:00 до 21:00 #[a.underline-decorate(href="/") Подробнее о клинике]
+        template(x-for="(advantage, advantageInd) in advantagesList" :key="advantageInd")
+          .advantage
+            img(:src="advantage.img" :alt="advantage.imgAlt" loading="lazy")
+            h6.advantage-title(x-text="advantage.title")
+            p.advantage-description(x-text="advantage.description")

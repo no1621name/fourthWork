@@ -1,0 +1,12 @@
+section#price.discounts
+  .discounts-content.container
+    h3.title #[b Акции и скидки] в нашей клинике
+    .discounts-list(x-data="discounts")
+      template(x-for="(discount, ind) in discountsList" :key="ind")
+        .discount(:style="`background-image: url(${discount.backgroundImg})`")
+          .prices
+            span.new-price(x-text="discount.newPrice")
+            span.old-price(x-text="discount.oldPrice")
+          .discount-info
+            p.discount-description(x-text="discount.description")
+            a(:href="discount.linkHref") Что входит в стоимость

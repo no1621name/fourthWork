@@ -1,0 +1,28 @@
+section#clinic.clinic
+  .clinic-content.container(x-data="clinic")
+    .clinic-swiper.swiper
+      .swiper-wrapper
+        template(x-for="(slide, slideInd) in slides" :key="slideInd")
+          .swiper-slide.clnic-slide
+            img(:src="slide.img" :alt="slide.imgAlt" loading="lazy")
+            a(:href="slide.videoLink") #[img(src="./img/icons/icon.svg#play-arrow2" alt="#play-arrow2" loading="lazy")]
+      #clinicSwiperPagination.clinic-swiper-pagination.swiper-pagination
+    .clinic-text
+      h3.title Несколько слов #[b о клинике]
+      span.subtitle Все очные консультации и операции проходят здесь
+      p Двухэтажная клиника “REVITALIFE” площадью 1000 м2 открылась в 2020 году. Но уже сейчас в ней проводится несколько операций ежедневно.
+      .about-clinic
+        template(x-for="(fact, ind) in aboutClinicFactsList" :key="ind")
+          .about-clinic-fact
+            +checkMark()
+            p(x-html="fact")
+      .founder-info
+        .founder
+          img(src="./img/clinic/maysara.png" alt="maysara" loading="lazy")
+          span.founder-fullname Dr. Maysara Bahja
+        .foundeer-text
+          p Основатель клиники “Revitalife” - Dr. Maysar, имеет опыт более 20 лет практической медицины в лучших клиниках Лондона. Он создал центр, основываясь на последних достижениях медицины и огромном личном опыте.
+          .license
+            img(src="./img/clinic/license.png" alt="license" loading="lazy")
+            a(href="/") #[span Посмотреть выписку медицинской лицензии на сайте по надзору в сфере здравоохранения]
+          p С 1 января 2021 законодательством не предусмотрена выдача лицензии в бумажном варианте. #[a(href="/") Подробнее...]

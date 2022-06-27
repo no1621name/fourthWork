@@ -1,0 +1,10 @@
+section#cases.cases
+  .cases-content
+    h3.title #[b Личные истории пациентов и случаи из практики] за каждым стоит судьба человека
+    .cases-swiper.swiper
+      .swiper-wrapper(x-data="cases")
+        template(x-for="(caseSlide, caseInd) in casesList" :key="caseInd")
+          .swiper-slide.case-slide
+            img(:src="caseSlide.img" :alt="caseSlide.imgAlt" loading="lazy")
+            p(x-text="caseSlide.text")
+      +swiperNavigation('casesSwiperButtonPre', 'casesSwiperButtonNext', 'casesSwiperPagination')

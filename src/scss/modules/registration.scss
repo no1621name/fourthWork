@@ -1,0 +1,401 @@
+.registration{
+  padding-top: 130px;
+  .registration-content{
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 85px;
+    height: 810px;
+    background: url('../img/registration/bg.png');
+    background-size: cover;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .about-registration{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .about-registration-text{
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        .title{
+          width: 140%;
+          margin-bottom: 35px;
+        }
+        .on-consultation{
+          > span{
+            display: block;
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 26px;
+          }
+          .on-consultation-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 420px;
+            .consultations-list{
+              padding-left: 30px;
+              box-sizing: border-box;
+              .consultation{
+                &+.consultation{
+                  margin-top: 25px;
+                }
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 24px;
+                position: relative;
+                &::before{
+                  content: "";
+                  position: absolute;
+                  width: 21px;
+                  height: 21px;
+                  background: rgba(89, 127, 174, 0.2);
+                  border-radius: 50%;
+                  left: -35px;
+                }
+                &::after{
+                  content: "";
+                  position: absolute;
+                  width: 11px;
+                  height: 11px;
+                  background: #597FAE;
+                  border-radius: 50%;
+                  left: -30px;
+                  top: 20%;
+                }
+              }
+            }
+            .registration-contacts{
+              width: 515px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              .main-contacts{
+                text-align: left;
+                >span:first-child{
+                  padding-left: 15px;
+                  font-size: 18px;
+                  line-height: 21px;
+                }
+              }
+              .messengers-container{
+                width: 125px;
+                height: 113px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: column;
+                span{
+                  font-size: 18px;
+                  line-height: 24px;
+                }
+                .messengers{
+                  width: 105px;
+                  img{
+                    width: 47px;
+                    height: 47px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      > img{
+        width: 474px;
+        height: 776.59px;
+        position: relative;
+        left: -50px;
+        bottom: -20px;
+      }
+    }
+    form{
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .form-title{
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 300;
+        width: 434px;
+        text-align: center;
+        b{
+          font-weight: 700;
+        }
+      }
+      input, select, button{
+        padding: 0 44px;
+        background: #fff;
+        box-sizing: border-box;
+        width: 434px;
+        height: 95px;
+        border-radius: 1000px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        transition: all .1s;
+        &:focus,  &:hover{
+          border: 0;
+          outline: 3px solid #597FAE;
+        }
+        &::placeholder{
+          color: #A8A8A8;
+        }
+      }
+      label[for="clientConsult"]{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        select{
+          cursor: pointer;
+          color: #A8A8A8;
+          -webkit-appearance: none;
+          appearance: none;
+          position: relative;
+          &:focus, &.changed{
+            color: #000;
+          }
+          option{
+            font-weight: 300;
+          }
+        }
+        &::after{
+          content: "";
+          width: 12px;
+          height: 10px;
+          position: absolute;
+          background: #A8A8A8;
+          top: 45%;
+          right: 45px;
+          clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+        }
+      }
+      button{
+        background: #597FAE;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:focus, &:hover{
+          outline: none;
+        }
+        img{
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .special-terms{
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input[type="checkbox"]{
+          width: 24px;
+          height: 24px;
+          box-sizing: border-box;
+          border: 2px solid #597FAE;
+          border-radius: 6px;
+          background-color: #fff;
+          -webkit-appearance: none;
+          appearance: none;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          place-content: center;
+          transition: background-color .3s;
+          &::before{
+            content: "";
+            width: 15px;
+            height: 12.8px;
+            background: #fff;
+            transform-origin: bottom left;
+            opacity: 0;
+            clip-path: polygon(41% 52%, 26% 35%, 10% 51%, 37% 88%, 37% 88%, 37% 88%, 37% 88%, 37% 88%, 91% 33%, 78% 18%);
+            transition: opacity .3s;
+
+          }
+          &:checked{
+            background: #597FAE;
+            &::before{
+              opacity: 1;
+            }
+          }
+          &:focus, &:hover{
+            outline: none;
+          }
+        }
+        label{
+          width: 290px;
+          .underline-decorate{
+            user-select: none;
+            border-bottom: 1px dashed #597FAE;
+            padding-bottom: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//adaptability
+
+@media(max-width: 1800px){
+  .registration .registration-content{
+    justify-content: space-around;
+    .about-registration{
+      .about-registration-text .title{
+        text-align: left;
+      }
+      >img{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 1439px){
+  .registration .registration-content{
+    padding: 20px 0;
+    height: 1500px;
+    flex-direction: column;
+    .about-registration .about-registration-text{
+      .title{
+        text-align: center;
+      }
+      .on-consultation{
+        > span{
+          text-align: center;
+          font-size: 26px;
+        }
+        .on-consultation-content{
+          align-items: center;
+          .consultations-list .consultation{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    form{
+      input, select, button, .form-title{
+        width: 585px;
+      }
+      .special-terms{
+        width: 350px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1023px){
+  .registration .registration-content{
+    height: 1250px;
+    .about-registration{
+      .about-registration-text{
+        .on-consultation{
+          >span{
+            font-size: 24px;
+          }
+          .on-consultation-content{
+            height: auto;
+            display: grid;
+            grid-template-columns: 310px 200px;
+            justify-content: space-between;
+            align-items: start;
+            .registration-contacts{
+              grid-column-start: 2;
+              height: 190px;
+              width: auto;
+              flex-direction: column;
+              align-items: flex-end;
+              .messengers-container{
+                width: max-content;
+                align-items: center;
+                height: 90px;
+              }
+            }
+            .consultations-list .consultation{
+              font-size: 18px;
+              &::after{
+                top: 10%;
+              }
+              &:nth-child(n+5){
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+      form .form-title{
+        width: 435px;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .registration .registration-content{
+    border-radius: 75px;
+    height: max-content;
+    .about-registration{
+      width: 100%;
+      .about-registration-text{
+        width: 100%;
+        .on-consultation{
+          .on-consultation-content{
+            .consultations-list{
+              width: 100%;
+              .consultation{
+                &::before{
+                  left: -25px;
+                }
+                &::after{
+                  left: -20px;
+                }
+                &:nth-child(n+5){
+                  width: auto;
+                }
+              }
+            }
+            .registration-contacts{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    form{
+      width: 100%;
+      .form-title{
+        width: 100%;
+      }
+      input, select, button{
+        width: 95%;
+      }
+      button{
+        font-size: 16px;
+        img{
+          display: none;
+        }
+      }
+      .special-terms{
+        flex-direction: column;
+        width: 90%;
+        label{
+          text-align: center;
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

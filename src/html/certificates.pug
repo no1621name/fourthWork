@@ -1,0 +1,12 @@
+section#certificates.certificates
+  .certificates-content.container
+    .about-certificates
+      h3.title Безопасная #[b операция]
+      p #[b Клиника REVITALIFE несёт личную ответственность] за безопасность операций
+      b Дипломы и сертификаты:
+    .certificates-swiper.swiper
+      .swiper-wrapper(x-data="certificates")
+        template(x-for="(certificate, ind) in certificatesList" :key="ind")
+          .swiper-slide.certificate-slide
+            img(:src="certificate.img" :alt="certificate.imgAlt" loading="lazy")
+      +swiperNavigation('certificatesSwiperButtonPre', 'certificatesSwiperButtonNext', 'certificatesSwiperPagination')

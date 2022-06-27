@@ -1,0 +1,283 @@
+.clinic{
+  padding-top: 130px;
+  .clinic-content{
+    display: flex;
+    justify-content: space-between;
+    .clinic-swiper{
+      width: 845px;
+      margin: 0;
+      .swiper-wrapper{
+        .clnic-slide{
+          position: relative;
+          > img{
+            width: 100%;
+            height: 564px;
+            border-radius: 13px;
+          }
+          a{
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 2;
+            top: 37%;
+            right: 45%;
+            &::before, &::after{
+              content: "";
+              border-radius: 50%;
+              position: absolute;
+            }
+            &::before{
+              width: 115px;
+              height: 115px;
+              background: rgba(255, 255, 255, 0.6);
+            }
+            &::after{
+              width: 147px;
+              height: 147px;
+              background: rgba(255, 255, 255, 0.24);
+            }
+            img{
+              z-index: 3;
+              height: 24px;
+              width: 21px;
+            }
+          }
+        }
+      }
+      .swiper-pagination{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .swiper-pagination-bullet{
+          background: transparent;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 1;
+          width: 155px;
+          height: 105px;
+          margin: 0;
+          img{
+            width: 100%;
+            border-radius: 13px;
+          }
+        }
+      }
+    }
+    .clinic-text{
+      display: flex;
+      align-content: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 788px;
+      margin-top: -11px;
+      .title{
+        margin: 0 0 0 -4px;
+      }
+      .subtitle{
+        width: max-content;
+        margin-right: auto;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 26px;
+        margin-top: 5px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .about-clinic{
+        margin: 14px 0 24px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .about-clinic-fact{
+          display: grid;
+          align-items: center;
+          grid-template-columns: auto auto;
+          width: 375px;
+          &:nth-child(n+4){
+            margin-top: 32px;
+          }
+          &:nth-child(4){
+            grid-template-columns: auto 363px;
+          }
+          &:nth-child(odd){
+            width: 340px;
+            p{
+              width: 250px;
+            }
+          }
+          .check-mark{
+            height: 61.75px;
+            width: 61.75px;
+          }
+          p{
+            margin: 0 0 0 25px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+      .founder-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .founder{
+          height: 265px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          img{
+            border-radius: 13px;
+            width: 170px;
+            height: 226.52px;
+          }
+          .founder-fullname{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+        .foundeer-text{
+          width: 550px;
+          .license{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+              width: 74px;
+              height: 105.43px;
+              border-radius: 6px;
+            }
+            a{
+              width: 457px;
+              text-decoration: none;
+              color: #000;
+              span{
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 29px;
+                text-transform: uppercase;
+                border-bottom: 1px dashed #597FAE;
+                padding-bottom: 3px;
+              }
+            }
+          }
+          >p a{
+            font-weight: 600;
+            color: #597FAE;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+//adaptability
+
+@media(max-width: 1800px){
+  .clinic .clinic-content .clinic-swiper{
+    width: 550px;
+    .swiper-pagination .swiper-pagination-bullet{
+      width: 105px;
+    }
+  }
+}
+
+@media(max-width: 1439px) {
+  .clinic .clinic-content{
+    flex-direction: column-reverse;
+    align-items: center;
+    .clinic-swiper{
+      width: 845px;
+      height: 700px;
+      .swiper-pagination .swiper-pagination-bullet{
+        width: 155px;
+      }
+    }
+    .clinic-text{
+      .title, .subtitle{
+        margin: 5px auto 0 auto;
+      }
+      > p{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media(max-width: 1023px){
+  .clinic .clinic-content{
+    .clinic-swiper{
+      width: 100%;
+      .swiper-pagination .swiper-pagination-bullet{
+        width: 135px;
+      }
+    }
+    .clinic-text{
+      width: 100%;
+      .about-clinic .about-clinic-fact:nth-child(4){
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .clinic .clinic-content{
+    .clinic-swiper{
+      height: 900px;
+      .swiper-wrapper .clnic-slide a{
+        right: 36%;
+        top: 28%;
+      }
+      .swiper-pagination{
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    }
+    .clinic-text{
+      .subtitle{
+        width: 100%;
+        text-align: center;
+      }
+      .founder-info{
+        flex-direction: column;
+        .foundeer-text{
+          width: 100%;
+          text-align: center;
+          .license{
+            height: 230px;
+            flex-direction: column;
+            a{
+              width: 100%;
+            }
+          }
+        }
+      }
+      .about-clinic .about-clinic-fact{
+        width: 100%;
+        & + .about-clinic-fact{
+          margin-top: 20px;
+        }
+        p{
+          word-break: break-word;
+        }
+        &:nth-child(odd) p{
+          width: auto;
+        }
+      }
+    }
+  }
+}

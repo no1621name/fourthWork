@@ -1,0 +1,17 @@
+section.before-after
+  .before-after-content.container
+    .before-after-text-content
+      span.pre-title Представьте, как уже завтра вы просыпаетесь с носом своей мечты
+      h4.title #[b Сравните визуально отличие] "до" и "после" ринопластики
+      .help
+        img(src="./img/icons/icon.svg#horizontal-scroll" alt="horizontal-scroll" loading="lazy")
+        p #[b Передвигайте указатель] на изображении влево/вправо для просмотра
+    .before-after-swiper.swiper
+      .swiper-wrapper(x-data="beforeAfterSlider")
+        template(x-for="(slide, ind) in slides" :key="ind")
+          .swiper-slide.before-after-slider(
+            :id="$id('beforeAfterSlider')"
+            :data-beforeimg="slide.beforeImg"
+            :data-afterimg="slide.afterImg"
+          )
+    +swiperNavigation('beforeAfterSwiperButtonPrev', 'beforeAfterSwiperButtonNext', 'beforeAfterSwiperPagination')

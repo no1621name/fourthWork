@@ -1,0 +1,69 @@
+//- reuseble global mixins
+block variables
+  mixin messengers()
+    .messengers
+      a(href="/")
+        img(src="../img/social-medias-icons/whatsapp.svg", alt="whatsapp-icon" loading="lazy")
+      a(href="/")
+        img(src="../img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
+  mixin socialMedias()
+    .social-medias
+      a(href="/")
+        img(src="../img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
+      a(href="/")
+        img(src="../img/social-medias-icons/vk.svg", alt="vk-icon" loading="lazy")
+  mixin mainContacts()
+    .main-contacts
+      span #[span.online-mark Звоните,] Пн-ВС с 8:00 до 21:00
+      span.phone-number #[img(src="./img/icons/icon.svg#phone" alt="phone-icon" loading="lazy")] 7 (499) 286 88 60
+  mixin haritonowInfo()
+    .haritonow-info
+      .fullname-container
+        span.fullname Константин Харитонов
+      if block
+        block
+  mixin swiperNavigation(preId, nextId, paginationId)
+    .swiper-navigation
+      .swiper-button(id=preId)
+        svg(width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M3.02185 19.8954L11.7673 11.15L2.34912 2.40454" stroke="white" stroke-width="3.8049" stroke-linecap="round" stroke-linejoin="round")
+      .swiper-pagination(id=paginationId)
+      .swiper-button(id=nextId)
+        svg(width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M3.02185 19.8954L11.7673 11.15L2.34912 2.40454" stroke="white" stroke-width="3.8049" stroke-linecap="round" stroke-linejoin="round")
+  mixin note()
+    .note
+      img(src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy")
+      if block
+        block
+      else
+        p empty
+  mixin checkMark()
+    span.check-mark
+      img(src="./img/icons/icon.svg#check", alt="check mark" loading="lazy")
+
+//- main html and modules
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/style.min.css")
+    title Fourth work
+  body
+  include html/header.pug
+  main
+    include html/before-after.pug
+    include html/discounts.pug
+    include html/specialization.pug
+    include html/about-operation.pug
+    include html/registration.pug
+    include html/cases.pug
+    include html/about-haritonow.pug
+    include html/certificates.pug
+    include html/clinic.pug
+    include html/FAQ.pug
+    include html/contacts.pug
+  include html/footer.pug
+  script(src="./js/app.min.js")
