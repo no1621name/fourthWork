@@ -4528,11 +4528,3 @@ b {
     font-size: 22px;
   }
 }
-
-.webp header { background: url(../img/header/bg.webp); }
-
-.webp .about-operation { background-image: url(../img/about-operation/bg.webp); }
-
-.webp .registration .registration-content { background: url(../img/registration/bg.webp); }
-
-.webp .FAQ { background: url(../img/FAQ/bg.webp); }
