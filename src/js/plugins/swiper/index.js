@@ -74,7 +74,7 @@ export default () => {
     pagination: {
       el: '.about-operation-swiper-pagination',
       clickable: true,
-      renderBullet: (ind, className) => `<span class="${className}">${aboutOperation.pagination[ind]}</span>`,
+      renderBullet: (index, className) => `<span class="${className}">${aboutOperation().pagination[index]}</span>`,
     },
   });
 
@@ -153,7 +153,7 @@ export default () => {
     pagination: {
       el: '#clinicSwiperPagination',
       clickable: true,
-      renderBullet: (ind, className) =>  `<span class="${className}"><img src="${clinic.pagination[ind]}" alt="clinic swiper pagination ${ind+1}"></img></span>`,
+      renderBullet: (ind, className) =>  `<span class="${className}"><img src="${clinic().pagination[ind]}" alt="clinic swiper pagination ${ind+1}"></img></span>`,
     },
   });
 };

@@ -1,4 +1,3 @@
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 import pug from 'gulp-pug';
 
@@ -14,12 +13,6 @@ export const html = () => {
       pretty: true,
       verbose: true
     }))
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        webpHtmlNosvg()
-      )
-    )
     .pipe(
       app.plugins.if(
         app.isBuild,

@@ -60,28 +60,28 @@ export default () => {
   Alpine.data('beforeAfterSlider', () => ({
     slides: [
       {
-        beforeImg: '../img/pseudoslides/pseudoslide1.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide2.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide1.jpg',
+        afterImg: './img/pseudoslides/pseudoslide2.jpg'
       },
       {
-        beforeImg: '../img/pseudoslides/pseudoslide3.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide4.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide3.jpg',
+        afterImg: './img/pseudoslides/pseudoslide4.jpg'
       },
       {
-        beforeImg: '../img/pseudoslides/pseudoslide1.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide2.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide1.jpg',
+        afterImg: './img/pseudoslides/pseudoslide2.jpg'
       },
       {
-        beforeImg: '../img/pseudoslides/pseudoslide3.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide4.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide3.jpg',
+        afterImg: './img/pseudoslides/pseudoslide4.jpg'
       },
       {
-        beforeImg: '../img/pseudoslides/pseudoslide1.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide2.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide1.jpg',
+        afterImg: './img/pseudoslides/pseudoslide2.jpg'
       },
       {
-        beforeImg: '../img/pseudoslides/pseudoslide3.jpg',
-        afterImg: '../img/pseudoslides/pseudoslide4.jpg'
+        beforeImg: './img/pseudoslides/pseudoslide3.jpg',
+        afterImg: './img/pseudoslides/pseudoslide4.jpg'
       },
     ],
   }));
@@ -93,21 +93,21 @@ export default () => {
         oldPrice: '170 000 ₽',
         description: 'ринопластика «только кончик»',
         linkHref: '/',
-        backgroundImg: '../img/discounts/service-1.png',
+        backgroundImg: './img/discounts/service-1.png',
       },
       {
         newPrice: '230 000 ₽',
         oldPrice: '420 000 ₽',
         description: 'ринопластика + нижняя транс-конъюктивальная блефаропластика',
         linkHref: '/',
-        backgroundImg: '../img/discounts/service-3.png',
+        backgroundImg: './img/discounts/service-3.png',
       },
       {
         newPrice: '200 000 ₽',
         oldPrice: '290 000 ₽',
         description: 'ринопластика + верхняя блефаропластика',
         linkHref: '/',
-        backgroundImg: '../img/discounts/service-2.png',
+        backgroundImg: './img/discounts/service-2.png',
       },
 
     ]

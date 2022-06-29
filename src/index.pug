@@ -3,19 +3,19 @@ block variables
   mixin messengers()
     .messengers
       a(href="/")
-        img(src="../img/social-medias-icons/whatsapp.svg", alt="whatsapp-icon" loading="lazy")
+        img(src="./img/social-medias-icons/whatsapp.svg", alt="whatsapp-icon" loading="lazy")
       a(href="/")
-        img(src="../img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
+        img(src="./img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
   mixin socialMedias()
     .social-medias
       a(href="/")
-        img(src="../img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
+        img(src="./img/social-medias-icons/telegram.svg", alt="telegram-icon" loading="lazy")
       a(href="/")
-        img(src="../img/social-medias-icons/vk.svg", alt="vk-icon" loading="lazy")
+        img(src="./img/social-medias-icons/vk.svg", alt="vk-icon" loading="lazy")
   mixin mainContacts()
     .main-contacts
       span #[span.online-mark Звоните,] Пн-ВС с 8:00 до 21:00
-      span.phone-number #[img(src="./img/icons/icon.svg#phone" alt="phone-icon" loading="lazy")] 7 (499) 286 88 60
+      span.phone-number #[img(src="./img/icons/phone.svg" alt="phone-icon" loading="lazy")] 7 (499) 286 88 60
   mixin haritonowInfo()
     .haritonow-info
       .fullname-container
@@ -33,14 +33,14 @@ block variables
           path(d="M3.02185 19.8954L11.7673 11.15L2.34912 2.40454" stroke="white" stroke-width="3.8049" stroke-linecap="round" stroke-linejoin="round")
   mixin note()
     .note
-      img(src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy")
+      img(src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy")
       if block
         block
       else
         p empty
   mixin checkMark()
     span.check-mark
-      img(src="./img/icons/icon.svg#check", alt="check mark" loading="lazy")
+      img(src="./img/icons/check.svg", alt="check mark" loading="lazy")
 
 //- main html and modules
 doctype html

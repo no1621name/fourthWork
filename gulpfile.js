@@ -16,13 +16,12 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js'
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
-import { svgConverter } from './gulp/tasks/svgSprite.js';
 import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js'
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
-const mainTasks = gulp.series(fonts, svgConverter, gulp.parallel(html, scss, js, images)) ;
+const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images)) ;
 
 function watcher() {
   gulp.watch(path.watch.html, html);

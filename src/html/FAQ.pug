@@ -7,7 +7,7 @@ section#FAQ.FAQ
           template(x-for="(question, questionInd) in column" :key="questionInd")
             .question
                 .question-header(@click="question.active=!question.active")
-                  img(src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy" :class="question.active?'active-arrow':''")
+                  img(src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy" :class="question.active?'active-arrow':''")
                   h5.question-text(x-text="question.questionText")
                   span.question-number(x-text="((questionInd+(columnInd?5:0)+1 >= 10)?'':'0') + (questionInd+1+(columnInd?5:0))" :class="question.active?'active-question':''")
                 p.answer(
@@ -21,7 +21,7 @@ section#FAQ.FAQ
           template(x-if="columnInd")
             .other-questions
               p Хотите обсудить вопрос напрямую с хирургом?
-              a(href="#registration") ОСТАВИТЬ ЗАЯВКУ #[img(src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy")]
+              a(href="#registration") ОСТАВИТЬ ЗАЯВКУ #[img(src="./img/icons/top-arrow.svg" alt="top-arrow" loading="lazy")]
     .FAQ-haritonow
       p.haritonow-answer На вопросы отвечает хирург #[b Константин Харитонов]
       img(src="./img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy")

@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220627192209">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220629133407">
     <title>Fourth work</title>
   </head>
   <body></body>
   <header x-data="header">
     <div class="top-header">
-      <div class="experience"><img src="../img/logo.svg" alt="logo" loading="lazy">
+      <div class="experience"><img src="./img/logo.svg" alt="logo" loading="lazy">
         <p>Хирургический стаж в <b>эстетической медицине с 2014 года</b></p>
       </div>
-      <button class="menu-button" id="menuButton" @click="toggleNavbar"><img src="./img/icons/icon.svg#burger" alt="burger"></button>
-      <div class="header-clinic"><picture><source srcset="./img/clinic/clinic1.webp" type="image/webp"><img src="./img/clinic/clinic1.png" alt="clinic" loading="lazy"></picture>
+      <button class="menu-button" id="menuButton" @click="toggleNavbar"><img src="./img/icons/burger.svg" alt="burger"></button>
+      <div class="header-clinic"><img src="./img/clinic/clinic1.png" alt="clinic" loading="lazy">
         <p>Двухэтажная клиника 1000 кв.м  <b>открылась в 2020 году в Москве</b> <a class="underline-decorate" href="/">Посмотреть видео о клинике</a></p>
       </div>
       <div class="rating"><span class="rating-value">5,0</span>
         <p><span class="stars" x-data="{starsCount: 5}">
-            <template x-for="i in starsCount" :key="i"><img src="./img/icons/icon.svg#star" alt="starundefined" loading="lazy"></template><br></span><b>Рейтинг клиники</b> согласно <a class="underline-decorate" href="/">отзывам наших пациентов</a></p>
+            <template x-for="i in starsCount" :key="i"><img src="./img/icons/star.svg" alt="starundefined" loading="lazy"></template><br></span><b>Рейтинг клиники</b> согласно <a class="underline-decorate" href="/">отзывам наших пациентов</a></p>
       </div>
-      <div class="messengers"><a href="/"><img src="../img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
+      <div class="messengers"><a href="/"><img src="./img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
       <div class="header-contacts">
         <div class="main-contacts"><span><span class="online-mark">Звоните,</span> Пн-ВС 8:00 - 21:00</span><span class="phone-number">+7 (499) 286 88 60</span></div><span class="underline-decorate">Москва, ул. Б. Очаковская, д.31</span>
       </div>
@@ -38,26 +38,26 @@
           <div class="consultation-services"><span><b>Приходите на консультацию</b>, если хотите:</span>
             <div class="consultation-services-list" x-data="consultation">
               <template x-for="(service, ind) in consultationServices" :key="ind">
-                <div class="consultation-service"><span class="check-mark"><img src="./img/icons/icon.svg#check" alt="check mark" loading="lazy"/></span>
+                <div class="consultation-service"><span class="check-mark"><img src="./img/icons/check.svg" alt="check mark" loading="lazy"/></span>
                   <p x-html="service"></p>
                 </div>
               </template>
             </div>
-            <div class="results"><a href="/"><picture><source srcset="../img/header/video-preview.webp" type="image/webp"><img src="../img/header/video-preview.png" alt="video-preview" loading="lazy"></picture><img src="./img/icons/icon.svg#play-arrow" alt="play-arrow" loading="lazy"></a>
+            <div class="results"><a href="/"><img src="./img/header/video-preview.png" alt="video-preview" loading="lazy"><img src="./img/icons/play-arrow.svg" alt="play-arrow" loading="lazy"></a>
               <p><b>Результат операции</b> видео 15 сек.</p>
             </div>
           </div>
           <div class="header-registration">
-            <div class="registration-link"><a href="#registration">Записаться на бесплатную консультацию с фотомоделированием <img src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy"></a><span class="terms">Акция действительна до: 11.05.2022</span></div>
+            <div class="registration-link"><a href="#registration">Записаться на бесплатную консультацию с фотомоделированием <img src="./img/icons/top-arrow.svg" alt="top-arrow" loading="lazy"></a><span class="terms">Акция действительна до: 11.05.2022</span></div>
             <div class="online-answer"><span><span class="online-mark">Есть вопросы?</span> Спросите ONLINE</span>
-              <div class="messengers"><a href="/"><img src="../img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
+              <div class="messengers"><a href="/"><img src="./img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
             </div>
           </div>
         </div>
         <div class="header-haritonow">
           <div class="haritonow-info">
             <div class="fullname-container"><span class="fullname">Константин Харитонов</span></div><span class="post">Пластический хирург клиники “Revitalife”</span>
-          </div><picture><source srcset="../img/haritonow/haritonow1.webp" type="image/webp"><img src="../img/haritonow/haritonow1.png" alt="haritonow1"></picture>
+          </div><img src="./img/haritonow/haritonow1.png" alt="haritonow1">
         </div>
       </div>
     </div>
@@ -67,7 +67,7 @@
       <div class="before-after-content container">
         <div class="before-after-text-content"><span class="pre-title">Представьте, как уже завтра вы просыпаетесь с носом своей мечты</span>
           <h4 class="title"><b>Сравните визуально отличие</b> "до" и "после" ринопластики</h4>
-          <div class="help"><img src="./img/icons/icon.svg#horizontal-scroll" alt="horizontal-scroll" loading="lazy">
+          <div class="help"><img src="./img/icons/horizontal-scroll.svg" alt="horizontal-scroll" loading="lazy">
             <p><b>Передвигайте указатель</b> на изображении влево/вправо для просмотра</p>
           </div>
         </div>
@@ -130,7 +130,7 @@
             <template x-for="(slide, slideInd) in aboutOperationList" :key="slideInd">
               <div class="swiper-slide">
                 <template x-for="(text, textInd) in slide" :key="textInd">
-                  <div class="slide-info"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy">
+                  <div class="slide-info"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy">
                     <p x-text="text"></p>
                   </div>
                 </template>
@@ -142,13 +142,13 @@
           <div class="surgeon-opinion-info">
             <h4 class="title">Пластический хирург <b>о ринопластике:</b></h4>
             <p>Есть <b>2 типа ринопластики,</b> которые используются наиболее часто:</p>
-            <div class="note"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy"/>
+            <div class="note"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy"/>
               <p><b>Открытая</b> -  я использую <b>в сложных случаях при необходимости</b> устранения посттравматических деформаций наружного носа и носовой перегородки. При этой технике все мягкие ткани носа поднимаются.</p>
             </div>
-            <div class="note"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy"/>
+            <div class="note"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy"/>
               <p><b>Закрытая</b> - менее травматична и этот метод я использую <b>при первичной ринопластике.</b> Все манипуляции происходят через небольшие разрезы в носовых ходах, благодаря чему снаружи никаких следов не остается.</p>
             </div>
-            <div class="surgeon-opinion-text"><picture><source srcset="../img/haritonow/haritonow3.webp" type="image/webp"><img src="../img/haritonow/haritonow3.png" alt="haritonow3" loading="lazy"></picture>
+            <div class="surgeon-opinion-text"><img src="./img/haritonow/haritonow3.png" alt="haritonow3" loading="lazy">
               <p><b>Я применяю оба метода в зависимости от конкретного случая пациента.</b> Всё зависит от того, какая проблема изначально. Часто именно правильно
                 подобранный тип ринопластики позволяет избежать возможных нежелательных последствий»
               </p><a href="#aboutHaritonow"><span class="underline-decorate">Подробнее о хирурге клиники “Revitalife”</span></a>
@@ -168,7 +168,7 @@
               </p>
             </div>
             <template x-for="(advantage, advantageInd) in advantagesList" :key="advantageInd">
-              <div class="advantage"><picture><source srcset="advantage.img" type="image/webp"><img :src="advantage.img" :alt="advantage.imgAlt" loading="lazy"></picture>
+              <div class="advantage"><img :src="advantage.img" :alt="advantage.imgAlt" loading="lazy">
                 <h6 class="advantage-title" x-text="advantage.title"></h6>
                 <p class="advantage-description" x-text="advantage.description"></p>
               </div>
@@ -190,14 +190,14 @@
                   </template>
                 </div>
                 <div class="registration-contacts">
-                  <div class="main-contacts"><span><span class="online-mark">Звоните,</span> Пн-ВС с 8:00 до 21:00</span><span class="phone-number"><img src="./img/icons/icon.svg#phone" alt="phone-icon" loading="lazy"> 7 (499) 286 88 60</span></div>
+                  <div class="main-contacts"><span><span class="online-mark">Звоните,</span> Пн-ВС с 8:00 до 21:00</span><span class="phone-number"><img src="./img/icons/phone.svg" alt="phone-icon" loading="lazy"> 7 (499) 286 88 60</span></div>
                   <div class="messengers-container"><span>Или пишите, <b>мы онлайн</b></span>
-                    <div class="messengers"><a href="/"><img src="../img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
+                    <div class="messengers"><a href="/"><img src="./img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div><picture><source srcset="../img/haritonow/haritonow2.webp" type="image/webp"><img src="../img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy"></picture>
+          </div><img src="./img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy">
         </div>
         <form>
           <h4 class="form-title"><b>Заполните форму,</b> и мы свяжемся с вами в течение 5 минут в рабочее время</h4>
@@ -211,7 +211,7 @@
               </template>
             </select>
           </label>
-          <button type="submit">Записаться на бесплатную консультацию <img src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy"></button>
+          <button type="submit">Записаться на бесплатную консультацию <img src="./img/icons/top-arrow.svg" alt="top-arrow" loading="lazy"></button>
           <div class="special-terms">
             <input id="acceptTerms" required type="checkbox" name="client-accept-terms">
             <label for="acceptTerms"><a class="underline-decorate" href="/">Согласен с условиями обработки персональных данных</a></label>
@@ -225,7 +225,7 @@
         <div class="cases-swiper swiper">
           <div class="swiper-wrapper" x-data="cases">
             <template x-for="(caseSlide, caseInd) in casesList" :key="caseInd">
-              <div class="swiper-slide case-slide"><picture><source srcset="caseSlide.img" type="image/webp"><img :src="caseSlide.img" :alt="caseSlide.imgAlt" loading="lazy"></picture>
+              <div class="swiper-slide case-slide"><img :src="caseSlide.img" :alt="caseSlide.imgAlt" loading="lazy">
                 <p x-text="caseSlide.text"></p>
               </div>
             </template>
@@ -250,10 +250,10 @@
       <div class="about-haritonow-content container">
         <div class="about-haritonow-text">
           <h3 class="title">Здравствуйте, меня зовут <b>Харитонов Константин Сергеевич</b></h3><span>Мой хирургический стаж в эстетической медицине с 2014 года. Как и многим потомственным врачам, мне было суждено связать свою жизнь с медициной:</span>
-          <div class="note"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy"/>
+          <div class="note"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy"/>
             <p><b>Мой дедушка</b> - Харитонов Аркадий Игнатьевич был челюстно-лицевым хирургом <b>Моя бабушка</b> - Харитонова Евгения Игнатьевна была стоматологом</p>
           </div>
-          <div class="note"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy"/>
+          <div class="note"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy"/>
             <p><b>Мой отец</b> - Харитонов Сергей Аркадьевич, ведущий хирург по ринопластике, врач высшей квалификационной категории, резидент ОСЭМ, эксперт русской и европейской школ ринохирургии</p>
           </div>
           <p><b>2009-2016</b> Москва, Первый Московский государственный медицинский университет имени И.М. Сеченова, Лечебный факультет</p>
@@ -265,13 +265,13 @@
           <p>Я регулярно принимаю участие в тематических симпозиумах, конференциях и мастер-классах, совершенствуя свои знания и практические навыки.</p>
         </div>
         <div class="social-medias-container"><span>Подписывайтесь, <b>в соц. сетях:</b></span>
-          <div class="social-medias"><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/vk.svg" alt="vk-icon" loading="lazy"/></a></div>
+          <div class="social-medias"><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/vk.svg" alt="vk-icon" loading="lazy"/></a></div>
         </div>
         <div class="haritonow">
           <div class="haritonow-info">
             <div class="fullname-container"><span class="fullname">Константин Харитонов</span></div>
             <div class="post-container"><span class="post">“Я считаю, что <b>самое главное в работе хирурга</b> - найти контакт с пациентами. Пациенты ценят доктора за чуткое отношение и высокое мастерство, с которым он умеет приблизить черты внешности к идеальным”</span></div>
-          </div><picture><source srcset="./img/haritonow/haritonow1.webp" type="image/webp"><img src="./img/haritonow/haritonow1.png" alt="haritonow1" loading="lazy"></picture>
+          </div><img src="./img/haritonow/haritonow1.png" alt="haritonow1" loading="lazy">
         </div>
       </div>
     </section>
@@ -284,7 +284,7 @@
         <div class="certificates-swiper swiper">
           <div class="swiper-wrapper" x-data="certificates">
             <template x-for="(certificate, ind) in certificatesList" :key="ind">
-              <div class="swiper-slide certificate-slide"><picture><source srcset="certificate.img" type="image/webp"><img :src="certificate.img" :alt="certificate.imgAlt" loading="lazy"></picture></div>
+              <div class="swiper-slide certificate-slide"><img :src="certificate.img" :alt="certificate.imgAlt" loading="lazy"></div>
             </template>
           </div>
           <div class="swiper-navigation">
@@ -308,7 +308,7 @@
         <div class="clinic-swiper swiper">
           <div class="swiper-wrapper">
             <template x-for="(slide, slideInd) in slides" :key="slideInd">
-              <div class="swiper-slide clnic-slide"><picture><source srcset="slide.img" type="image/webp"><img :src="slide.img" :alt="slide.imgAlt" loading="lazy"></picture><a :href="slide.videoLink"><img src="./img/icons/icon.svg#play-arrow2" alt="#play-arrow2" loading="lazy"></a></div>
+              <div class="swiper-slide clnic-slide"><img :src="slide.img" :alt="slide.imgAlt" loading="lazy"><a :href="slide.videoLink"><img src="./img/icons/play-arrow2.svg" alt="#play-arrow2" loading="lazy"></a></div>
             </template>
           </div>
           <div class="clinic-swiper-pagination swiper-pagination" id="clinicSwiperPagination"></div>
@@ -318,16 +318,16 @@
           <p>Двухэтажная клиника “REVITALIFE” площадью 1000 м2 открылась в 2020 году. Но уже сейчас в ней проводится несколько операций ежедневно.</p>
           <div class="about-clinic">
             <template x-for="(fact, ind) in aboutClinicFactsList" :key="ind">
-              <div class="about-clinic-fact"><span class="check-mark"><img src="./img/icons/icon.svg#check" alt="check mark" loading="lazy"/></span>
+              <div class="about-clinic-fact"><span class="check-mark"><img src="./img/icons/check.svg" alt="check mark" loading="lazy"/></span>
                 <p x-html="fact"></p>
               </div>
             </template>
           </div>
           <div class="founder-info">
-            <div class="founder"><picture><source srcset="./img/clinic/maysara.webp" type="image/webp"><img src="./img/clinic/maysara.png" alt="maysara" loading="lazy"></picture><span class="founder-fullname">Dr. Maysara Bahja</span></div>
+            <div class="founder"><img src="./img/clinic/maysara.png" alt="maysara" loading="lazy"><span class="founder-fullname">Dr. Maysara Bahja</span></div>
             <div class="foundeer-text">
               <p>Основатель клиники “Revitalife” - Dr. Maysar, имеет опыт более 20 лет практической медицины в лучших клиниках Лондона. Он создал центр, основываясь на последних достижениях медицины и огромном личном опыте.</p>
-              <div class="license"><picture><source srcset="./img/clinic/license.webp" type="image/webp"><img src="./img/clinic/license.png" alt="license" loading="lazy"></picture><a href="/"><span>Посмотреть выписку медицинской лицензии на сайте по надзору в сфере здравоохранения</span></a></div>
+              <div class="license"><img src="./img/clinic/license.png" alt="license" loading="lazy"><a href="/"><span>Посмотреть выписку медицинской лицензии на сайте по надзору в сфере здравоохранения</span></a></div>
               <p>С 1 января 2021 законодательством не предусмотрена выдача лицензии в бумажном варианте. <a href="/">Подробнее...</a></p>
             </div>
           </div>
@@ -342,7 +342,7 @@
             <div class="FAQ-column">
               <template x-for="(question, questionInd) in column" :key="questionInd">
                 <div class="question">
-                  <div class="question-header" @click="question.active=!question.active"><img src="./img/icons/icon.svg#remark-arrow" alt="remark-arrow" loading="lazy" :class="question.active?'active-arrow':''">
+                  <div class="question-header" @click="question.active=!question.active"><img src="./img/icons/remark-arrow.svg" alt="remark-arrow" loading="lazy" :class="question.active?'active-arrow':''">
                     <h5 class="question-text" x-text="question.questionText"></h5><span class="question-number" x-text="((questionInd+(columnInd?5:0)+1 &gt;= 10)?'':'0') + (questionInd+1+(columnInd?5:0))" :class="question.active?'active-question':''"></span>
                   </div>
                   <p class="answer" @click="question.active=!question.active" x-text="question.answer" x-show="question.active" x-transition x-transition:enter.duration.400ms x-transition:leave.duration.300ms></p>
@@ -350,14 +350,14 @@
               </template>
               <template x-if="columnInd">
                 <div class="other-questions">
-                  <p>Хотите обсудить вопрос напрямую с хирургом?</p><a href="#registration">ОСТАВИТЬ ЗАЯВКУ <img src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy"></a>
+                  <p>Хотите обсудить вопрос напрямую с хирургом?</p><a href="#registration">ОСТАВИТЬ ЗАЯВКУ <img src="./img/icons/top-arrow.svg" alt="top-arrow" loading="lazy"></a>
                 </div>
               </template>
             </div>
           </template>
         </div>
         <div class="FAQ-haritonow">
-          <p class="haritonow-answer">На вопросы отвечает хирург <b>Константин Харитонов</b></p><picture><source srcset="./img/haritonow/haritonow2.webp" type="image/webp"><img src="./img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy"></picture>
+          <p class="haritonow-answer">На вопросы отвечает хирург <b>Константин Харитонов</b></p><img src="./img/haritonow/haritonow2.png" alt="haritonow2" loading="lazy">
         </div>
       </div>
     </section>
@@ -366,33 +366,33 @@
 </div>
       <div class="contacts-content">
         <div class="contacts-text-content">
-          <div class="main-contacts"><span><span class="online-mark">Звоните,</span> Пн-ВС с 8:00 до 21:00</span><span class="phone-number"><img src="./img/icons/icon.svg#phone" alt="phone-icon" loading="lazy"/> 7 (499) 286 88 60</span></div>
-          <div class="address"><img src="./img/icons/icon.svg#map-marker" alt="map-marker">
+          <div class="main-contacts"><span><span class="online-mark">Звоните,</span> Пн-ВС с 8:00 до 21:00</span><span class="phone-number"><img src="./img/icons/phone.svg" alt="phone-icon" loading="lazy"/> 7 (499) 286 88 60</span></div>
+          <div class="address"><img src="./img/icons/map-marker.svg" alt="map-marker">
             <p><b>г. Москва,</b> ул. Большая Очаковская, д. 31</p>
           </div>
           <div class="internet-contacts">
             <div class="messangers-container"><span>Спрашивайте, <b>мы онлайн</b></span>
-              <div class="messengers"><a href="/"><img src="../img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
+              <div class="messengers"><a href="/"><img src="./img/social-medias-icons/whatsapp.svg" alt="whatsapp-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a></div>
             </div>
             <div class="social-medias-container"><span>Подписывайтесь, <b>в соц. сетях</b></span>
-              <div class="social-medias"><a href="/"><img src="../img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a><a href="/"><img src="../img/social-medias-icons/vk.svg" alt="vk-icon" loading="lazy"/></a></div>
+              <div class="social-medias"><a href="/"><img src="./img/social-medias-icons/telegram.svg" alt="telegram-icon" loading="lazy"/></a><a href="/"><img src="./img/social-medias-icons/vk.svg" alt="vk-icon" loading="lazy"/></a></div>
             </div>
           </div>
         </div>
         <div class="contacts-clinic">
           <h5>Приезжайте к нам в клинику, <b>прямо сейчас!</b></h5>
           <div class="contacts-clinic-img" x-data="contacts">
-            <template x-for="(clinicImg, ind) in clinicImagesList" :key="ind"><picture><source srcset="clinicImg.src" type="image/webp"><img :src="clinicImg.src" :alt="clinicImg.alt"></picture></template>
+            <template x-for="(clinicImg, ind) in clinicImagesList" :key="ind"><img :src="clinicImg.src" :alt="clinicImg.alt"></template>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer><img src="../img/logo.svg" alt="logo" loading="lazy">
+  <footer><img src="./img/logo.svg" alt="logo" loading="lazy">
     <p>ООО "РЕВАЙТАЛАЙФ" | ОГРН 1197746735009 Юр. адрес: Москва, Б. Очаковская ул., д. 31</p>
     <p>Москва © 2022 ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</p>
-    <div class="links"><a class="underline-decorate" href="/">Политика конфиденциальности</a><a class="designer-link underline-decorate" href="https://kwork.ru/user/taraslazarenko"><img src="../img/designer-logo.svg" alt="designer-logo" loading="lazy"></a></div>
+    <div class="links"><a class="underline-decorate" href="/">Политика конфиденциальности</a><a class="designer-link underline-decorate" href="https://kwork.ru/user/taraslazarenko"><img src="./img/designer-logo.svg" alt="designer-logo" loading="lazy"></a></div>
     <div class="my-footer" style="position: relative;bottom: -20px;padding: 5px 0;width: 100%;display: flex;flex-wrap: wrap;justify-content: space-around;background-color: #e5e5e5;"><a href="http://t.me/george1621" style="text-decoration: none;">Telegram</a><span>georges1621@mail.ru</span></div>
   </footer>
-  <script src="./js/app.min.js?_v=20220627192209"></script>
+  <script src="./js/app.min.js?_v=20220629133407"></script>
 </html>

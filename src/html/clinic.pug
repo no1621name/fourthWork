@@ -5,7 +5,7 @@ section#clinic.clinic
         template(x-for="(slide, slideInd) in slides" :key="slideInd")
           .swiper-slide.clnic-slide
             img(:src="slide.img" :alt="slide.imgAlt" loading="lazy")
-            a(:href="slide.videoLink") #[img(src="./img/icons/icon.svg#play-arrow2" alt="#play-arrow2" loading="lazy")]
+            a(:href="slide.videoLink") #[img(src="./img/icons/play-arrow2.svg" alt="#play-arrow2" loading="lazy")]
       #clinicSwiperPagination.clinic-swiper-pagination.swiper-pagination
     .clinic-text
       h3.title Несколько слов #[b о клинике]

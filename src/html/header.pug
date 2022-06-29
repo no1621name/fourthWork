@@ -1,10 +1,10 @@
 header(x-data="header")
   .top-header
     .experience
-      img(src="../img/logo.svg", alt="logo" loading="lazy")
+      img(src="./img/logo.svg", alt="logo" loading="lazy")
       p Хирургический стаж в #[b эстетической медицине с 2014 года]
     button#menuButton.menu-button(@click="toggleNavbar")
-      img(src="./img/icons/icon.svg#burger" alt="burger")
+      img(src="./img/icons/burger.svg" alt="burger")
     .header-clinic
       img(src="./img/clinic/clinic1.png", alt="clinic" loading="lazy")
       p Двухэтажная клиника 1000 кв.м  #[b открылась в 2020 году в Москве] #[a.underline-decorate(href="/") Посмотреть видео о клинике]
@@ -13,7 +13,7 @@ header(x-data="header")
       p
         span.stars(x-data="{starsCount: 5}")
           template(x-for="i in starsCount" :key="i")
-            img(src="./img/icons/icon.svg#star" alt=`star${i}` loading="lazy")
+            img(src="./img/icons/star.svg" alt=`star${i}` loading="lazy")
           br
         | #[b Рейтинг клиники] согласно #[a.underline-decorate(href="/") отзывам наших пациентов]
     +messengers()
@@ -48,12 +48,12 @@ header(x-data="header")
                 p(x-html="service")
           .results
             a(href="/")
-              img(src="../img/header/video-preview.png", alt="video-preview" loading="lazy")
-              img(src="./img/icons/icon.svg#play-arrow", alt="play-arrow" loading="lazy")
+              img(src="./img/header/video-preview.png", alt="video-preview" loading="lazy")
+              img(src="./img/icons/play-arrow.svg", alt="play-arrow" loading="lazy")
             p #[b Результат операции] видео 15 сек.
         .header-registration
           .registration-link
-            a(href="#registration") Записаться на бесплатную консультацию с фотомоделированием #[img(src="./img/icons/icon.svg#top-arrow" alt="top-arrow" loading="lazy")]
+            a(href="#registration") Записаться на бесплатную консультацию с фотомоделированием #[img(src="./img/icons/top-arrow.svg" alt="top-arrow" loading="lazy")]
             span.terms Акция действительна до: 11.05.2022
           .online-answer
             span #[span.online-mark Есть вопросы?] Спросите ONLINE
@@ -61,4 +61,4 @@ header(x-data="header")
       .header-haritonow
         +haritonowInfo()
           span.post Пластический хирург клиники “Revitalife”
-        img(src="../img/haritonow/haritonow1.png" alt="haritonow1")
+        img(src="./img/haritonow/haritonow1.png" alt="haritonow1")
