@@ -115,6 +115,7 @@
   .contacts {
     display: flex;
     flex-direction: column;
+    align-items: center;
     .contacts-content{
       position: relative;
       transform: none;
