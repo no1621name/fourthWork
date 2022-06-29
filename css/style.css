@@ -4418,6 +4418,7 @@ b {
   .contacts {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .contacts .contacts-content {
